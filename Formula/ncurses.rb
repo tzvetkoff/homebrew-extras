@@ -1,18 +1,25 @@
 require 'formula'
 
 class Ncurses < Formula
-  url 'http://ftpmirror.gnu.org/ncurses/ncurses-5.7.tar.gz'
-  homepage 'http://www.gnu.org/software/ncurses/'
-  md5 'cce05daf61a64501ef6cd8da1f727ec6'
+  homepage 'http://www.gnu.org/s/ncurses/'
+  url 'http://ftpmirror.gnu.org/ncurses/ncurses-5.9.tar.gz'
+  mirror 'http://ftp.gnu.org/gnu/ncurses/ncurses-5.9.tar.gz'
+  sha1 '3e042e5f2c7223bffdaac9646a533b8c758b65b5'
+
+  option :universal
 
   def install
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
+    ENV.universal_binary if build.universal?
+
+    system "./configure", "--disable-debug",
                           "--prefix=#{prefix}",
-                          "--disable-echo",
-                          "--without-ada",
+                          "--mandir=#{man}",
+                          "--with-shared",
                           "--enable-widec",
-                          # tic doesn't link correctly
-                          "--without-progs"
+                          "--with-manpage-format=normal",
+                          "--enable-symlinks",
+                          "--without-cxx-binding"
+    system "make"
     system "make install"
   end
 end

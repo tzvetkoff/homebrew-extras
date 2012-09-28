@@ -6,7 +6,8 @@ class Nano < Formula
   md5 '03233ae480689a008eb98feb1b599807'
 
   def install
-    system "./configure", "--disable-debug", "--disable-dependency-tracking",
+    system "./configure", "--disable-debug",
+                          "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
                           "--enable-nls",
                           "--disable-tiny",
