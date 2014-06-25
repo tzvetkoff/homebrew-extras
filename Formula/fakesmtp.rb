@@ -1,8 +1,6 @@
 require 'formula'
 
 class Fakesmtp < Formula
-  skip_clean :all
-
   homepage 'http://nilhcem.github.io/FakeSMTP/'
   url 'https://github.com/Nilhcem/FakeSMTP/archive/v1.10.tar.gz'
   sha256 '45520478f132e805132694828e37c8a375bd086cdb92e46d837f2bae8d635277'
@@ -36,4 +34,4 @@ if [[ ${EUID} != 0 ]]; then
   exec sudo ${BASH_SOURCE[0]} ${*}
 fi
 
-nohup -- java -jar `brew --prefix`/opt/fakesmtp/libexec/fakesmtp.jar ${*} --output-dir ${HOME}/FakeSMTP >/dev/null 2>&1 &
+nohup -- java -Xdock:name="FakeSMTP" -jar `brew --prefix`/opt/fakesmtp/libexec/fakesmtp.jar ${*} --output-dir ${HOME}/FakeSMTP >/dev/null 2>&1 &
