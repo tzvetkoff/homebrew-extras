@@ -4,7 +4,7 @@ class Ncurses < Formula
   homepage 'http://www.gnu.org/s/ncurses/'
   url 'http://ftpmirror.gnu.org/ncurses/ncurses-5.9.tar.gz'
   mirror 'http://ftp.gnu.org/gnu/ncurses/ncurses-5.9.tar.gz'
-  sha256 '3e042e5f2c7223bffdaac9646a533b8c758b65b5'
+  sha256 '9046298fb440324c9d4135ecea7879ffed8546dd1b58e59430ea07a4633f563b'
 
   option :universal
 
