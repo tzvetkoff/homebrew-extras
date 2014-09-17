@@ -12,11 +12,21 @@ class Fakesmtp < Formula
   def install
     system 'mvn package -Dmaven.test.skip'
 
+    script = <<-END.undent
+      #!/bin/bash
+
+      if [[ ${EUID} != 0 ]]; then
+        exec sudo ${BASH_SOURCE[0]} ${*}
+      fi
+
+      nohup -- java -Xdock:name="FakeSMTP" -jar `brew --prefix`/opt/fakesmtp/libexec/fakesmtp.jar ${*} --output-dir ${HOME}/FakeSMTP >/dev/null 2>&1 &
+    END
+
     FileUtils.mkdir_p(libexec)
     FileUtils.cp Dir['target/fake*.jar'].first, "#{libexec}/fakesmtp.jar"
 
     FileUtils.mkdir_p(bin)
-    File.write("#{bin}/fakesmtp", DATA.read)
+    File.write("#{bin}/fakesmtp", script)
     File.chmod(0755, "#{bin}/fakesmtp")
   end
 
@@ -26,12 +36,3 @@ class Fakesmtp < Formula
     END
   end
 end
-
-__END__
-#!/bin/bash
-
-if [[ ${EUID} != 0 ]]; then
-  exec sudo ${BASH_SOURCE[0]} ${*}
-fi
-
-nohup -- java -Xdock:name="FakeSMTP" -jar `brew --prefix`/opt/fakesmtp/libexec/fakesmtp.jar ${*} --output-dir ${HOME}/FakeSMTP >/dev/null 2>&1 &
