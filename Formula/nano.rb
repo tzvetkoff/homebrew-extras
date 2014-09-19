@@ -6,8 +6,8 @@ class Nano < Formula
   sha256 'be68e133b5e81df41873d32c517b3e5950770c00fc5f4dd23810cd635abce67a'
 
   devel do
-    url 'http://www.nano-editor.org/dist/v2.3/nano-2.3.4.tar.gz'
-    sha256 '1774129f4b933df5dbfdf45c4ecdbfc19eb6ff8c2fc6ad43c7f392aa7cd998c1'
+    url 'http://www.nano-editor.org/dist/v2.3/nano-2.3.6.tar.gz'
+    sha256 'a74bf3f18b12c1c777ae737c0e463152439e381aba8720b4bc67449f36a09534'
   end
 
   depends_on 'ncurses'
