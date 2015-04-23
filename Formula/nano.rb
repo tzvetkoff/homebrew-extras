@@ -1,13 +1,13 @@
 require 'formula'
 
 class Nano < Formula
-  url 'http://www.nano-editor.org/dist/v2.2/nano-2.2.6.tar.gz'
+  url 'http://www.nano-editor.org/dist/v2.4/nano-2.4.1.tar.gz'
   homepage 'http://www.nano-editor.org/'
-  sha256 'be68e133b5e81df41873d32c517b3e5950770c00fc5f4dd23810cd635abce67a'
+  sha256 '6a0ceb5e1b9b9bea72d5d1f46488ace4782b1f198ea6ba558480a86d994f29d2'
 
   devel do
-    url 'http://www.nano-editor.org/dist/v2.3/nano-2.3.6.tar.gz'
-    sha256 'a74bf3f18b12c1c777ae737c0e463152439e381aba8720b4bc67449f36a09534'
+    url 'http://www.nano-editor.org/dist/v2.3/nano-2.3.99pre3.tar.gz'
+    sha256 '0bd01e049173bd1adee7fa012a0a90283a8de2bc643a0c1c32fb48ce16c9f4f4'
   end
 
   depends_on 'ncurses'

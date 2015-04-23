@@ -3,9 +3,9 @@ require 'formula'
 # "File" is a reserved class name
 class FileFormula < Formula
   homepage 'http://www.darwinsys.com/file/'
-  url 'ftp://ftp.astron.com/pub/file/file-5.20.tar.gz'
-  sha256 '5bc36bfbb83a009da25a7174848f1bc5824be03192a8fdce7f83dc897ed2d247'
-  version '5.20'
+  url 'ftp://ftp.astron.com/pub/file/file-5.22.tar.gz'
+  sha256 'c4e3a8e44cb888c5e4b476e738503e37fb9de3b25a38c143e214bfc12109fc0b'
+  version '5.22'
   patch :DATA
 
   def install

@@ -2,8 +2,8 @@ require 'formula'
 
 class Fakesmtp < Formula
   homepage 'http://nilhcem.github.io/FakeSMTP/'
-  url 'https://github.com/Nilhcem/FakeSMTP/archive/v1.11.tar.gz'
-  sha256 'c70ba758ccee5058bf5e484873d08f6c34eeed19c6a289913b1b477b7bff8676'
+  url 'https://github.com/Nilhcem/FakeSMTP/archive/v1.13.tar.gz'
+  sha256 '5fd281a86cf8bf781eacba3f7fe1b70359e1e157c8cfc70a42df740858450675'
 
   head 'https://github.com/Nilhcem/FakeSMTP/archive/master.tar.gz'
 
