@@ -2,8 +2,8 @@ require 'formula'
 
 class Fakesmtp < Formula
   homepage 'http://nilhcem.github.io/FakeSMTP/'
-  url 'https://github.com/Nilhcem/FakeSMTP/archive/v1.13.tar.gz'
-  sha256 '5fd281a86cf8bf781eacba3f7fe1b70359e1e157c8cfc70a42df740858450675'
+  url 'https://github.com/Nilhcem/FakeSMTP/archive/v2.0.tar.gz'
+  sha256 '8cb623f32b55f814af43b731432eb14da80d95cb13059c79423265037cda9dfb'
 
   head 'https://github.com/Nilhcem/FakeSMTP/archive/master.tar.gz'
 
@@ -19,11 +19,11 @@ class Fakesmtp < Formula
         exec sudo ${BASH_SOURCE[0]} ${*}
       fi
 
-      nohup -- java -Xdock:name="FakeSMTP" -jar `brew --prefix`/opt/fakesmtp/libexec/fakesmtp.jar ${*} --output-dir ${HOME}/FakeSMTP >/dev/null 2>&1 &
+      nohup -- java -jar `brew --prefix fakesmtp`/libexec/fakesmtp.jar ${*} --output-dir ${HOME}/FakeSMTP >/dev/null 2>&1 &
     END
 
     FileUtils.mkdir_p(libexec)
-    FileUtils.cp Dir['target/fake*.jar'].first, "#{libexec}/fakesmtp.jar"
+    FileUtils.cp(Dir['target/fake*.jar'].first, "#{libexec}/fakesmtp.jar")
 
     FileUtils.mkdir_p(bin)
     File.write("#{bin}/fakesmtp", script)
