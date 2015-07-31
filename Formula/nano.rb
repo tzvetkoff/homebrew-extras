@@ -1,9 +1,9 @@
 require 'formula'
 
 class Nano < Formula
-  url 'http://www.nano-editor.org/dist/v2.4/nano-2.4.1.tar.gz'
+  url 'http://www.nano-editor.org/dist/v2.4/nano-2.4.2.tar.gz'
   homepage 'http://www.nano-editor.org/'
-  sha256 '6a0ceb5e1b9b9bea72d5d1f46488ace4782b1f198ea6ba558480a86d994f29d2'
+  sha256 'c8cd7f18fcf5696d9df3364ee2a840e0ab7b6bdbd22abf850bbdc951db7f65b9'
 
   devel do
     url 'http://www.nano-editor.org/dist/v2.3/nano-2.3.99pre3.tar.gz'
