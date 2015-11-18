@@ -2,9 +2,9 @@ require 'formula'
 
 class Ncurses < Formula
   homepage 'http://www.gnu.org/s/ncurses/'
-  url 'http://ftpmirror.gnu.org/ncurses/ncurses-5.9.tar.gz'
-  mirror 'http://ftp.gnu.org/gnu/ncurses/ncurses-5.9.tar.gz'
-  sha256 '9046298fb440324c9d4135ecea7879ffed8546dd1b58e59430ea07a4633f563b'
+  url 'http://ftpmirror.gnu.org/ncurses/ncurses-6.0.tar.gz'
+  mirror 'http://ftp.gnu.org/gnu/ncurses/ncurses-6.0.tar.gz'
+  sha256 'f551c24b30ce8bfb6e96d9f59b42fbea30fa3a6123384172f9e7284bcf647260'
 
   option :universal
 
