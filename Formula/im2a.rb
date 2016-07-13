@@ -8,10 +8,11 @@ class Im2a < Formula
 
   head 'https://github.com/tzvetkoff/im2a/archive/master.tar.gz'
 
-  depends_on 'autoconf'
-  depends_on 'automake'
-  depends_on 'pkg-config'
   depends_on 'imagemagick'
+  depends_on 'pkg-config' => :build
+  depends_on 'autoconf' => :build
+  depends_on 'automake' => :build
+  depends_on 'libtool' => :build
 
   def install
     system './bootstrap'
