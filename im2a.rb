@@ -2,9 +2,9 @@ require 'formula'
 
 class Im2a < Formula
   homepage 'https://github.com/tzvetkoff/im2a'
-  url 'https://github.com/tzvetkoff/im2a/archive/v0.5.0.tar.gz'
-  sha256 '514c1c3d8f519e3afbecfc39ac00e9b10fcf59f3c2b75df3a79e17d945a8398a'
-  version '0.5.0'
+  url 'https://github.com/tzvetkoff/im2a/archive/v0.5.1.tar.gz'
+  sha256 '7662f6a76f6d308c0762e387d2be1a282280c3dc07f3c914e6b4081a357c0b34'
+  version '0.5.1'
 
   head 'https://github.com/tzvetkoff/im2a/archive/master.tar.gz'
 
