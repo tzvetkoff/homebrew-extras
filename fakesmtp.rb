@@ -12,7 +12,7 @@ class Fakesmtp < Formula
   def install
     system 'mvn package -Dmaven.test.skip'
 
-    script = <<-END.undent
+    script = <<~END
       #!/bin/bash
 
       if [[ ${EUID} != 0 ]]; then
@@ -31,7 +31,7 @@ class Fakesmtp < Formula
   end
 
   def caveats
-    <<-END.undent
+    <<~END
       FakeSMTP requires root privileges in order to bind port 25.
     END
   end

@@ -13,11 +13,11 @@ class Nicer < Formula
   end
 
   def caveats
-    <<-EOS.undent
-    You should manualy make the nicer binary `SUID` & `SGID`.
+    <<~EOS
+      You should manualy make the nicer binary `SUID` & `SGID`.
 
-    $ sudo chown root:wheel #{bin/'nicer'}
-    $ sudo chmod 6755 #{bin/'nicer'}
+      $ sudo chown root:wheel #{bin/'nicer'}
+      $ sudo chmod 6755 #{bin/'nicer'}
     EOS
   end
 end
